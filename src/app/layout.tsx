@@ -30,11 +30,11 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="EduTOGO" />
       </head>
       <body className="antialiased m-0 p-0">
-        <AppProvider>
-          <Suspense fallback={<div className="min-h-screen">Chargement...</div>}>
+        <Suspense fallback={<div className="min-h-screen">Chargement...</div>}>
+          <AppProvider>
             <HeaderFooterWrapper>{children}</HeaderFooterWrapper>
-          </Suspense>
-        </AppProvider>
+          </AppProvider>
+        </Suspense>
       </body>
     </html>
   );
